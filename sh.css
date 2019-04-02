@@ -1,0 +1,251 @@
+/*css初始化*/
+body,div,ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,input{
+    margin: 0;
+    padding: 0;
+    /*如果文字大小相同可以初始化在这里*/
+    font: 12px 宋体;
+}
+img{
+    border: 0 none;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    border: 0 none;
+    outline-style: none;
+}
+/*设置公共类，左右浮动，使用时调用，大大提高效率*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*清除浮动*/
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+/*头部开始*/
+.header{
+    width: 980px;
+    height: 39px;
+    /*上20.左右居中，下0*/
+    margin: 20px auto 0px;
+}
+/*注意不写图片的宽高会在下面定义ul li的时候空出一部分给他*/
+.logo{
+    width: 179px;
+    height: 39px;
+}
+.search{
+    width: 195px;
+    height: 30px;
+    border: 1px solid #ececec;
+}
+.search input[type="text"]{
+    width: 165px;
+    height: 30px;
+    /*input是行内元素，把元素的顶端与行中最高元素的顶端对齐*/
+    /*vertical-align:;规避脱标流*/
+    vertical-align: top;
+}
+.search input[type="button"]{
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    background: url("picture/02search2.jpg");
+}
+.nav{
+    height: 55px;
+    background: url("picture/02nav_bg.png");
+    border-top: 1px solid #bbb;
+}
+.nav-con{
+    width: 980px;
+    height: 55px;
+    /*background: #aaaaaa;*/
+    margin: 0 auto;
+
+}
+.nav-con li{
+    float: left;
+}
+.nav-con li a{
+    display: inline-block;
+    height: 55px;
+    /*line-height: 55px;*/
+    /*font-size: 12px;*/
+    font: 700 12px/55px 宋体;
+    color: #000;
+    /*内边距上下0，左右30*/
+    padding: 0 30px;
+    /*每个链接的右边有个竖线的背景不要平铺*/
+    background: url("picture/02nav_bg-line.png") no-repeat;
+}
+.nav-con li a:hover{
+    color: #7cb609;
+}
+/*头部结束*/
+/*<!--banner旗帜部分开始-->*/
+.banner{
+    width: 980px;
+    height: 597px;
+    margin: 0 auto;
+}
+/*信息公告开始message*/
+/*通栏*/
+.mes{
+    height: 32px;
+    background: #eeeeee;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 15px;
+}
+.mes-con{
+    width: 980px;
+    height: 32px;
+    /*background: #aaa;*/
+    margin: 0 auto;
+}
+/*文字居中显示*/
+.mes-con-left{
+    height: 32px;
+    line-height: 32px;
+}
+.mes-con-right{
+    /*图片的高度为16*/
+    height: 16px;
+    margin-top: 8px;
+}
+/*信息公告结束message*/
+/*新闻news部分开始*/
+.news{
+    width: 980px;
+    /*设置上下边距15把新闻和底部相隔*/
+    margin: 15px auto;
+    /*background: #000;*/
+}
+
+.news-left,.news-cen,.news-right{
+    border: 1px solid #e4e4e4;
+    height: 224px;
+}
+.news-left{
+    width: 310px;
+    position: relative;
+}
+.news-cen{
+    width: 373px;
+    margin-left: 12px;
+}
+
+.news-right{
+    width: 268px;
+}
+.pro{
+    margin: 14px 0 0 6px;
+    color: #7cb609;
+
+}
+/*图片和文字居中对齐*/
+.pro img{
+    vertical-align: middle;
+}
+.pro-pic{
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+}
+.sanjiao-left{
+    position: absolute;
+    left: 10px;
+    bottom: 70px;
+}
+.sanjiao-right{
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+}
+/*u也是块元素所以这里ul li不用div包也可以*/
+.news-cen ul {
+    margin: 10px 17px 0;
+    /*background: red;*/
+}
+/*后代选择器*/
+.news-cen ul li{
+    height: 27px;
+    line-height: 27px;
+}
+.news-cen ul li a{
+    display: inline-block;
+    border-bottom: 1px dashed #dcdcdc;
+    color: #2e2e2e;
+}
+/*交集选择器*/
+.news-cen ul li a.sorry{
+    color: #FF0000;
+    /*加粗字体*/
+    font-weight: 700;
+}
+
+/*设置包住ul的盒子的位置是距上10，右0，下30，左28*/
+.tec{
+    margin: 10px 0 30px 28px;
+}
+.tec li{
+    height: 12px;
+    border-left: 3px solid #7ab800 ;
+    /*边距和文字之间的距离用padding撑*/
+    padding-left: 5px;
+    margin-bottom: 10px;
+    /*行高和高度一致，左边的边距和文字居中*/
+    line-height: 12px;
+}
+.news-right p{
+    margin-left: 28px;
+    /*行高一般1.5倍和2倍*/
+    line-height: 1.5;
+}
+/*新闻右盒子结束*/
+
+/*底部开始   */
+.footer{
+    height: 280px;
+    background: #2d2d2d;
+    border-bottom: 1px dashed #414141;
+}
+/*内容居中*/
+.footer-con{
+    width: 980px;
+    margin: 0 auto;
+}
+.footer-con dl{
+    float: left;
+    margin-top: 20px ;
+    margin-right: 40px;
+}
+.footer-con dl dt{
+    color: #eee;
+}
+.footer-con dl dd{
+    color: #707070;
+    margin-top: 20px;
+}
+.bot{
+    background: #2d2d2d;
+    height: 84px;
+    text-align: center;
+    padding-top: 30px;
+}
